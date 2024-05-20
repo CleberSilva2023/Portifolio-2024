@@ -58,13 +58,14 @@ button:hover {
     transform: scale(1.1s);
 }
 
-  /*Estilo dos links <a>*/
+/*Estilo dos links <a>*/
 a {
     color: #0597F2;
 }
 a:hover {
     color: #0460D9;
 }
+/*Estilo dos links <a>*/
 
 /* ESTILO DO CABEÇALHO */
 header {
