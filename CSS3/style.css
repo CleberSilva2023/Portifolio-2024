@@ -9,7 +9,8 @@
 }
 
 :root {
-    --cor01: #DDAC10;
+    --cor01: #0597F2;
+    --cor02: #0460D9;
 }
 
 body {
@@ -39,6 +40,7 @@ body {
 }
 .btn-contato button:hover {
     transform: scale(1.1);
+    background-color: var(--cor02);
 }
 
 h2.titulo {
@@ -54,6 +56,14 @@ h2.titulo span {
 button:hover {
     box-shadow: 0px 0px 8px var(--cor01);
     transform: scale(1.1s);
+}
+
+  /*Estilo dos links <a>*/
+a {
+    color: #0597F2;
+}
+a:hover {
+    color: #0460D9;
 }
 
 /* ESTILO DO CABEÇALHO */
@@ -271,6 +281,7 @@ section.sobre .flex {
 
 .btn-social button:hover {
     transform: scale(1.3);
+    background-color: var(--cor02);
 }
 
 /* ESTILO DO PORTFÓLIO */
@@ -375,7 +386,7 @@ form .btn-enviar input {
 }
 
 form .btn-enviar input:hover {
-    background-color: var(--cor01);
+    background-color: var(--cor02);
     transform: scale(1.1);
     color: #fff;
 }
@@ -396,7 +407,7 @@ footer .line-footer {
 }
 
 .borda {
-    border-top: 2px solid #DDAC10;
+    border-top: 2px solid #0597F2;
 }
 
 footer .line-footer p i {
@@ -508,4 +519,6 @@ footer .line-footer p a {
     footer .line-footer {
         text-align: center;
     }
+
+  
 }
