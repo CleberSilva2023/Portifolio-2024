@@ -69,7 +69,18 @@ a:hover {
 
 /* ESTILO DO CABEÇALHO */
 header {
-    padding: 40px 4%;
+    background-color: rgb(36, 36, 36);
+    padding: 20px 4%;
+
+    top: 0px;
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+}
+
+main {
+    position: relative;
+    margin-top: 100px;
 }
 
 header>.interface {
