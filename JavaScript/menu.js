@@ -25,7 +25,7 @@ const mensagem = document.getElementById("mensagem");
 form.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    checkInputUsername();
+    alert("FROMULÁRIO ENVIADO COM SUCESSO!")
 });
 
 function checkInputUsername(){
@@ -35,15 +35,53 @@ function checkInputUsername(){
         errorInput(nome, "Preencha o NOME!")
     }else{
         const formItem = nome.parentElement;
-        formItem.classList = "form-content"
+        formItem.className = "form-content"
     }
+}
+
+function checkInputEmail(){
+    const emailValue = email.value;
+
+    if(emailValue === ""){
+        errorInput(email, "O e-mail é obrigatório!")
+    }else{
+        const formItem = email.parentElement;
+        formItem.className = "form-content"
+    }
+}
+
+function ckeckInputPassword() {
+    const passwordValue = password.value; //NÃO EXISTE SENHA
+
+    if(passwordValue === ""){
+        errorInput(password, "A senha é obrigátorio.")
+    }else if(passwordValue.leng < 8){
+        errorInput(password, "A senha precisa ter no minimo 8 caracteres.")
+    }else{
+        const formItem = password.parentElement;
+        formItem.className = "form-content"
+    }
+}
+
+function checkForm() {
+    checkInputUsername();
+    checkInputEmail();
+    ckeckInputPassword();
+
+    const formItems = form.querySelector(".formulario")
+
+    const isValid = [...formItems];
+
+    console.log(isValid);
 }
 
 function errorInput(input,message){
     const formItem = input.pareElement;
-    const textMessage = formItem.querySelector("#erro")
+    const textMessage = formItem.querySelector("a#erro")
 
     textMessage.innerText = message;
 
     formItem.className = "form-content error"
 }
+
+
